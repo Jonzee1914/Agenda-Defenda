@@ -21,6 +21,12 @@ textarea{
   border-bottom: 10px solid black;
 }
 
+#currentDay {
+  font-size: x-large;
+  color: #77dd77;
+  font-weight: bold;
+}
+
 .description{
   white-space: pre-wrap;
 }
@@ -73,4 +79,8 @@ textarea{
 .fa-save {
   padding: 10px;
 
+}
+
+.container {
+  margin-bottom: 10%;
 }
