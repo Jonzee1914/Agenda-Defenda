@@ -35,9 +35,7 @@ var time9 = currentTime.hour(17).format("hh:mm A");
 $(".block-5").text(time9);
 
 // Compare current time to timeblock
-initializeAgenda();
-
-function initializeAgenda() {
+function determineTime() {
 
     $("input[type=text]").each(function (){
         var hourChoices = parseInt($(this).attr("id").split("-")[1]);
@@ -53,3 +51,21 @@ function initializeAgenda() {
             };
     });
 };
+
+determineTime();
+
+var block = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5];
+for (var i = 0; i < block.length; i++) {
+    var dataHour = localStorage.getItem(block[i]);
+    // form - control
+    $(".form" + block[i]).val(dataHour);
+}
+// Event listener to save to local stroage
+$(".saveBtn").click(function () {
+    event.preventDefault();
+    var formValue = $(this).siblings(".form-control").val();
+    console.log("This worked");
+    var listItem = $(this).parent().data("hour");
+
+    localStorage.setItem(listItem, formValue);
+});
