@@ -1,4 +1,4 @@
-# Agenda-Defenda
+# Agenda Defenda
 Your daily agenda is critical to your professional success - SO DEFEND IT!
 
 ## Purpose
