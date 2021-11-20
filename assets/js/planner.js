@@ -64,8 +64,13 @@ for (var i = 0; i < block.length; i++) {
 $(".saveBtn").click(function () {
     event.preventDefault();
     var formValue = $(this).siblings(".form-control").val();
-    console.log("This worked");
     var listItem = $(this).parent().data("hour");
 
     localStorage.setItem(listItem, formValue);
+});
+
+// Listener to delete local storage
+$(".deleteBtn").click(function () {
+    localStorage.clear();
+    location.reload();
 });
